@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mct="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             x:Class="IconTintColorBehavior_Shift_Bug.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <ImageButton
+                x:Name="ToggleSourceButton_Tinted"
+                Source="dotnet_racebot.png"
+                HeightRequest="185"
+                Clicked="ToggleSourceButtonTinted_Clicked"
+                Aspect="AspectFit">
+                <ImageButton.Behaviors>
+                    <mct:IconTintColorBehavior TintColor="LightBlue"/>
+                </ImageButton.Behaviors>
+            </ImageButton>
+
+            <ImageButton
+                x:Name="ToggleSourceButton"
+                Source="dotnet_racebot.png"
+                HeightRequest="185"
+                Clicked="ToggleSourceButton_Clicked"
+                Aspect="AspectFit"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
